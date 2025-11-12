@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "d04bda3d-f206-45d2-b38f-e128e8ddbd4a",
+		"name": "EmployeeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49910268",
+		"_collection_link": "https://aparnasanapala27-7872757.postman.co/workspace/Aparna-Sanapala's-Workspace~c26c6ef3-73e7-4c42-8f98-ff2fc8c104a6/collection/49910268-d04bda3d-f206-45d2-b38f-e128e8ddbd4a?action=share&source=collection_link&creator=49910268"
+	},
+	"item": [
+		{
+			"name": "Create Employee(Name, Email)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Aparna\",\r\n  \"lastName\": \"Sanapala\",\r\n  \"email\": \"aparna@example.com\",\r\n  \"address\": \"123 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee(Name, Email, Phone)",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"lastName\": \"Sharma\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"phone\": \"879456789\",\r\n  \"address\": \"456 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/full",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"full"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by Email(JPA Spec)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"address\": \"123 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/spec/email/aparna@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"spec",
+						"email",
+						"aparna@example.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by Email(hql)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"address\": \"123 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/hql/email/aparna@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"hql",
+						"email",
+						"aparna@example.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by Email(native SQL)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"address\": \"123 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/native/email/aparna@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"native",
+						"email",
+						"aparna@example.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by name(JPA Spec)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"address\": \"123 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/spec/name/Aparna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"spec",
+						"name",
+						"Aparna"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by name(HQL)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"address\": \"123 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/hql/name/Aparna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"hql",
+						"name",
+						"Aparna"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Details(Name, Phone, Address)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"lastName\": \"Das\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"phone\": \"779456789\",\r\n  \"address\": \"45 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/priya@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"priya@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee(Phone only)",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"phone\":\"5896321475\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/phone/aparna@example.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"phone",
+						"aparna@example.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee by Email",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"address\": \"123 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/email/priya@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"email",
+						"priya@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by name(Native)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Priya\",\r\n  \"email\": \"priya@gmail.com\",\r\n  \"address\": \"123 Main Street\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/employees/native/name/Aparna",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"employees",
+						"native",
+						"name",
+						"Aparna"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
